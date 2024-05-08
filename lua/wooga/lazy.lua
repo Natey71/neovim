@@ -10,7 +10,6 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 
-
 vim.opt.rtp:prepend(lazypath)
 
 -- Example using a list of specs with the default options

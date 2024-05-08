@@ -30,6 +30,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+local harpoon = require("harpoon")
+vim.keymap.set("n", "<leader>a", function() require('harpoon.mark').add_file() end)
+vim.keymap.set("n", "<C-e>", function() require('harpoon.ui').toggle_quick_menu() end)
+
+vim.keymap.set("n", "<C-j>", function() require('harpoon.ui').nav_next() end)
+vim.keymap.set("n", "<C-k>", function() require('harpoon.ui').nav_prev() end)
+
+vim.keymap.set("n", "<C-h>", function() require('harpoon.ui').nav_file(1) end)
+vim.keymap.set("n", "<C-t>", function() require('harpoon.ui').nav_file(2) end)
+
 
 
 -- things that I like

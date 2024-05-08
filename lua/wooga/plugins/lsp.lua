@@ -12,6 +12,10 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "clangd",
+                    "html",
+                    "htmx",
+                    "cssls",
+                    "zls"
                 }
             })
         end
@@ -24,6 +28,10 @@ return {
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({})
             lspconfig.clangd.setup({})
+            lspconfig.html.setup({})
+            lspconfig.htmx.setup({})
+            lspconfig.cssls.setup({})
+            lspconfig.zls.setup({})
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})

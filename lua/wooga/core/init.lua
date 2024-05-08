@@ -2,10 +2,8 @@
 
 require("wooga.core.keymaps")
 
-vim.cmd("colorscheme rose-pine")
-
+vim.cmd("colorscheme kanagawa")
 require("wooga.core.set")
-
 
 
 
